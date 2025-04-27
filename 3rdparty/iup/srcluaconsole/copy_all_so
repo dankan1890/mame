@@ -1,0 +1,40 @@
+#!/bin/bash
+
+Copy_SOs()
+{
+  PLAT=$1
+  LUA_SFX=$2
+  EXT=$3
+  
+  BASE_TEC=../..
+#  BASE_TEC=~tecgraf/lib
+  
+  echo $PLAT/Lua$LUA_SFX
+  DST_PLAT_LUA=../bin/$PLAT/Lua$LUA_SFX
+  mkdir -p $DST_PLAT_LUA
+  cp -f ../lib/$PLAT/*.$EXT $DST_PLAT_LUA
+  cp -f $BASE_TEC/cd/lib/$PLAT/*.$EXT $DST_PLAT_LUA
+  cp -f $BASE_TEC/im/lib/$PLAT/*.$EXT $DST_PLAT_LUA
+  cp -f $BASE_TEC/pdflib7/lib/$PLAT/*.$EXT $DST_PLAT_LUA
+  cp -f $BASE_TEC/ftgl/lib/$PLAT/*.$EXT $DST_PLAT_LUA
+  cp -f ../lib/$PLAT/Lua$LUA_SFX/*.$EXT $DST_PLAT_LUA
+  cp -f $BASE_TEC/cd/lib/$PLAT/Lua$LUA_SFX/*.$EXT $DST_PLAT_LUA
+  cp -f $BASE_TEC/im/lib/$PLAT/Lua$LUA_SFX/*.$EXT $DST_PLAT_LUA
+  cp -f $BASE_TEC/lua$LUA_SFX/bin/$PLAT/lua5* $DST_PLAT_LUA
+  cp -f $BASE_TEC/luagl/lib/$PLAT/Lua$LUA_SFX/*.$EXT $DST_PLAT_LUA
+  cp -f $BASE_TEC/lfs/lib/$PLAT/Lua$LUA_SFX/*.$EXT $DST_PLAT_LUA
+}
+
+for plat in Linux44_64 Linux68_64 Linux313_64 Linux415_64 Linux515_64
+do
+  Copy_SOs $plat 51 so
+  Copy_SOs $plat 52 so
+  Copy_SOs $plat 53 so
+  Copy_SOs $plat 54 so
+  if [ $plat == MacOS1010 ]; then
+    Copy_SOs $plat 51 dylib
+    Copy_SOs $plat 52 dylib
+    Copy_SOs $plat 53 dylib
+    Copy_SOs $plat 54 dylib
+  fi
+done

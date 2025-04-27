@@ -1,0 +1,62 @@
+EXPORTS
+  IupGLControlsOpen
+  IupGLCanvasBoxv
+  IupGLCanvasBox
+  IupGLCanvasBoxV
+  IupGLSubCanvas
+  IupGLLabel
+  IupGLSeparator
+  IupGLButton
+  IupGLToggle
+  IupGLLink
+  IupGLProgressBar
+  IupGLVal
+  IupGLFrame
+  IupGLExpander
+  IupGLScrollBox
+  IupGLSizeBox
+  IupGLText
+  IupGLDrawImage
+  IupGLDrawText
+  IupGLDrawGetTextSize
+  IupGLDrawGetImageInfo
+
+  iupGLDrawMultilineText
+  iupGLDrawIconImage
+  iupGLDrawLine
+  iupGLDrawPolygon
+  iupGLDrawPolyline
+  iupGLDrawRect
+  iupGLDrawBox
+  iupGLDrawFrameRect
+  iupGLDrawArrow
+  iupGLDrawSmallCircle
+  iupGLDrawSmallDisc
+  iupGLDrawIconImageZoom
+
+  iupGLFontGetStringWidth
+  iupGLFontGetMultiLineStringSize
+  iupGLFontGetCharSize
+  iupGLFontGetDim
+
+  iupGLIconRegisterAttrib
+  iupGLIconDraw
+  iupGLIconGetSize
+  iupGLIconGetImageHandle
+
+  iupGLImageGetInfo
+  iupGLImageGetData
+  iupGLColorMakeInactive
+
+  iupGLScrollbarsRegisterAttrib
+  iupGLScrollbarsButton
+  iupGLScrollbarsMotion
+  iupGLScrollbarsEnterWindow
+  iupGLScrollbarsLeaveWindow
+  iupGLScrollbarsDraw
+  iupGLScrollbarsGetSize
+  iupGLScrollbarsChildLayoutUpdate
+
+  iupGLSubCanvasRedraw
+  iupGLSubCanvasStartMoving
+  iupGLSubCanvasMove
